@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bella Pasta - Food Ordering</title>
+<style>
+*{
+  margin:0;
+  padding:0; 
+  box-sizing:border-box;
+  font-family:'Segoe UI',Arial;
+  }
+body{
+  background:#fffaf5;
+  }
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  position:sticky;
+  top:0
+  }
+.restaurant-card{
+  margin:20px;
+  background:#fff;
+  border-radius:20px;
+  padding:15px;
+  display:flex;
+  gap:15px;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+  }
+.restaurant-card img{
+  width:120px;
+  height:120px;
+  border-radius:15px;
+  object-fit:cover;
+  }
+.badge{
+  background:#fff3e0;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  margin:5px 5px 0 0;
+  display:inline-block;
+  }
+.offer{
+  margin:0 20px;
+  background:linear-gradient(135deg,#ffe0b2,#ff8a50);
+  border-radius:15px;
+  padding:20px;display:flex;
+  justify-content:space-between;
+  }
+.cat-list{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  }
+.cat{
+  white-space:nowrap;
+  padding:10px 18px;
+  background:#fff;
+  border-radius:25px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  cursor:pointer;
+  }
+.cat.active{
+  background:#ff6d00;
+  color:#fff;
+  }
+.food-card{
+  background:#fff;
+  border-radius:18px;
+  padding:12px;
+  display:flex;
+  gap:15px;
+  margin-bottom:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.06);
+  }
+.food-card img{
+  width:110px;
+   height:110px;
+   border-radius:12px;
+   object-fit:cover;
+   }
+.price{
+  font-weight:bold;
+  }
+.add-btn{
+  background:#ff6d00;
+  color:#fff;
+  border:none;
+  padding:8px 18px;
+  border-radius:25px;
+  font-weight:bold;
+  }
+.bottom-nav{
+  position:fixed;
+  bottom:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:95%;
+  max-width:420px;
+  background:#fff;
+  border-radius:25px;
+  display:flex;
+  justify-content:space-around;
+  padding:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,.15);
+  }
+@media(min-width:768px){.popular{display:grid;grid-template-columns:1fr 1fr;gap:15px}}
+</style>
+</head>
+<body>
+<header><b>☰ Restaurant</b></header>
+<div class="restaurant-card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300">
+<div>
+<h2> Pasta Italian Kitchen</h2>
+<p> 4.6 (1.2k reviews)</p>
+<span class="badge"> 25-35 min</span>
+<span class="badge"> Free Delivery</span>
+      <span class="badge"> 2.1 km away</span>
+</div>
+</div>
+<div class="offer"><div><h3>SPECIAL OFFER</h3><h2>20% OFF first order</h2><p>Code: WELCOME20</p></div><div style="font-size:50px"></div></div>
 
+<div style="padding:20px">
+<h3>Menu Categories</h3>
+<div class="cat-list" style="margin-top:10px"><div class="cat active"> Popular</div><div class="cat"> Pasta</div><div class="cat"> Pizza</div><div class="cat"> Desserts</div><div class="cat"> Drinks</div></div>
+</div>
+<div class="popular" style="padding:0 20px">
+<div class="food-card">
+  <img src="https://www.acouplecooks.com/wp-content/uploads/2022/10/Margherita-Pizza-093.jpg">
+  <div>
+    <h4>Margherita Pizza</h4>
+    <p style="font-size:12px;color:#666">Fresh mozzarella, basil & tomato</p>
+    <div style="display:flex;justify-content:space-between">
+      <span class="price">$12.99</span>
+      <button class="add-btn">Add +</button>
+      </div></div></div>
+<div class="food-card">
+  <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=300">
+  <div>
+    <h4>Creamy Alfredo Pasta</h4>
+    <p style="font-size:12px;color:#666">Garlic parmesan sauce</p>
+    <div style="display:flex;justify-content:space-between">
+      <span class="price">$11.50</span>
+      <button class="add-btn">Add +</button>
+      </div></div></div>
+<div class="food-card">
+  <img src="https://www.noracooks.com/wp-content/uploads/2023/04/veggie-burgers-1-2.jpg">
+  <div>
+    <h4>Veggie Burger</h4>
+    <p style="font-size:12px;color:#666">Cheese, veggies, special sauce</p>
+    <div style="display:flex;justify-content:space-between">
+      <span class="price">$8.99</span>
+      <button class="add-btn">Add +</button>
+      </div></div></div>
+</div>
+<div style="padding:20px">
+  <h3>Customer Reviews</h3>
+  <div class="food-card" style="margin-top:10px">
+    <div style="width:40px;height:40px;background:#ffcc80;border-radius:50%;display:flex;align-items:center;justify-content:center">
+      SK
+      </div>
+      <div><b>Triveni M. - ★★★★★</b>
+      <p style="font-size:13px">The pasta was delicious and delivered hot!</p>
+      </div></div></div>
+<br><br>
+<div class="bottom-nav"><div><br>Home</div><div><br>Search</div><div><br>Cart</div><div><br>Fav</div><div><br>Profile</div></div>
+</body>
+</html>
