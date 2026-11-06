@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake & Blush - Artisan Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; 
+            padding:0; 
+            box-sizing:border-box;
+         }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FFFEF7;
+    color: #3B2316;
+    }
+h1,h2,h3,h4 { 
+    font-family: 'Playfair Display', serif;
+ }
 
+
+nav {
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;
+    padding:18px 6%; 
+    background:#FFFEF7;
+    position:sticky;
+    top:0;
+    z-index:10;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+.logo { 
+    font-size:22px; 
+    font-weight:600; 
+    }
+nav ul {
+     display:flex;
+      list-style:none;
+       gap:30px; 
+    }
+nav ul a {
+     text-decoration:none; 
+     color:#3B2316; 
+     font-weight:500; }
+nav ul a:hover { 
+    color:#C27A4F;
+     }
+
+
+.hero {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:50px 6%;
+    gap:40px; flex-wrap:wrap;
+    }
+.hero-text { flex:1;
+    min-width:300px; 
+    }
+.hero-text h1 { 
+    font-size:52px; 
+    line-height:1.1; 
+    margin-bottom:15px;
+     }
+.hero-text p {
+     color:#6B4A3A; 
+     margin-bottom:25px; 
+     max-width:500px;
+     }
+.hero-btns { 
+    display:flex; 
+    gap:15px;
+     margin-bottom:25px; 
+    }
+.hero-img { 
+    flex:1; 
+    min-width:300px;
+     }
+.hero-img img { 
+    width:100%; 
+    border-radius:24px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+     }
+.trust {
+    display:flex;
+    gap:20px; 
+    font-size:14px;
+    color:#6B4A3A; }
+
+.btn-dark {
+    background:#3B2316; 
+    color:#FFFEF7;
+    padding:12px 26px;
+    border-radius:30px; 
+    text-decoration:none; 
+    font-weight:500; 
+    display:inline-block;
+    }
+.btn-dark:hover { 
+    background:#5a3523; 
+    }
+.btn-light {
+    border:1.5px solid #3B2316;
+    padding:12px 26px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#3B2316; 
+    font-weight:500;
+    }
+.small { 
+    padding:10px 20px;
+     font-size:14px; 
+    }
+
+
+.offer {
+    background:#FADADD; 
+    margin:10px 6%; 
+    padding:18px 30px;
+    border-radius:16px;
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    flex-wrap:wrap; 
+    gap:10px;
+    }
+
+
+.products { 
+    padding:60px 6%;
+     }
+.products h2 {
+     text-align:center;
+      font-size:38px;
+     }
+.subtitle { 
+    text-align:center; 
+    color:#8B6B5C; 
+    margin-bottom:35px; 
+    }
+.grid { display:grid;
+     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
+     }
+.card {
+    background:white;
+     border-radius:18px; 
+     overflow:hidden;
+    box-shadow:0 8px 20px rgba(59,35,22,0.07); 
+    transition:0.3s;
+    }
+.card:hover { 
+    transform:translateY(-6px); 
+    box-shadow:0 15px 30px rgba(59,35,22,0.12);
+     }
+.card img {
+     width:100%; 
+     height:220px;
+      object-fit:cover;
+     }
+.card-body { 
+    padding:16px; 
+}
+.card-body p { 
+    font-size:13px;
+     color:#8B6B5C; 
+     margin:6px 0 12px;
+     }
+.card-bottom { 
+    display:flex;
+     justify-content:space-between; 
+     align-items:center;
+     }
+.price { 
+    font-weight:600;
+     color:#3B2316; 
+    }
+.add {
+     background:#FADADD;
+      padding:6px 12px; 
+      border-radius:20px;
+       font-size:12px;
+        cursor:pointer;
+     }
+
+.card.wide {
+    grid-column: span 2; 
+    display:flex;
+    align-items:center; 
+    gap:20px;
+    background:#FADADD;
+     padding:20px;
+    }
+.card.wide img {
+     width:180px;
+      height:220px; 
+      border-radius:16px;
+     }
+.price-list {
+     margin:12px 0 15px 18px;
+      font-size:14px;
+     }
+
+.contact {
+    background:#3B2316; 
+    color:#FFFEF7; 
+    display:flex;
+    justify-content:space-between;
+     padding:40px 6%; 
+     gap:20px; 
+     flex-wrap:wrap;
+    }
+.contact h4 { 
+    color:#FADADD;
+     margin-bottom:8px; }
+footer {
+     background:#2A1710;
+      color:#FFFEF7; 
+      text-align:center;
+       padding:18px; 
+       font-size:13px; 
+    }
+
+@media(max-width:768px){
+    .hero-text h1 { font-size:38px; }
+    .card.wide { grid-column: span 1; flex-direction:column; }
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Bake & Blush</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#custom">Custom</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Baked with Love,<br>Served with Joy</h1>
+        <p>Handcrafted cakes, pastries & cookies made daily with the finest ingredients. Freshly baked in Gudivada.</p>
+        <div class="hero-btns">
+            <a href="#shop" class="btn-dark">Shop Now</a>
+            <a href="#custom" class="btn-light">Design Your Cake</a>
+        </div>
+        <div class="trust">
+            <span> Fresh Daily</span>
+            <span> Local Ingredients</span>
+            <span> Custom Designs</span>
+        </div>
+    </div>
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700" alt="Chocolate Cake">
+    </div>
+</section>
+
+<div class="offer">
+    <div>
+        <h3>Autumn Seasonal Offer</h3>
+        <p>20% OFF Pumpkin Spice Collection • Limited time only</p>
+    </div>
+    <a href="#shop" class="btn-dark small">Order Now →</a>
+</div>
+
+<section id="shop" class="products">
+    <h2>Our Bestsellers</h2>
+    <p class="subtitle">Freshly baked favorites loved by our customers</p>
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Cake">
+            <div class="card-body">
+                <h4>Chocolate Ganache Cake</h4>
+                <p>Rich, moist chocolate layered with ganache</p>
+                <div class="card-bottom">
+                    <span class="price">₹550 / kg</span>
+                    <span class="add">Add to Cart</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400" alt="Croissant">
+            <div class="card-body">
+                <h4>Butter Croissant</h4>
+                <p>Flaky, buttery French pastry baked fresh</p>
+                <div class="card-bottom">
+                    <span class="price">₹60 / pc</span>
+                    <span class="add">Add to Cart</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400" alt="Cookie">
+            <div class="card-body">
+                <h4>Pink Sugar Cookie</h4>
+                <p>Sweet sugar cookie with pink icing & sprinkles</p>
+                <div class="card-bottom">
+                    <span class="price">₹200 / box</span>
+                    <span class="add">Add to Cart</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card wide">
+            <div>
+                <h4>Custom Cake Design</h4>
+                <h3>Your Vision, Our Craft</h3>
+                <p>From birthdays to weddings, we create custom cakes tailored to your celebration.</p>
+                <ul class="price-list">
+                    <li>Photo Cakes: ₹750/kg</li>
+                    <li>Theme Cakes: ₹900/kg</li>
+                    <li>Wedding Tier: From ₹3500</li>
+                </ul>
+                <a href="#contact" class="btn-dark small">Start Custom Order →</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400" alt="Custom Cake">
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div><h4> Store Address</h4><p>Main Road, Clock Tower, Gudivada, AP 521301</p></div>
+    <div><h4> Contact</h4><p>+91 98765 43210<br>hello@bakeandblush.com<br>8am - 10pm Daily</p></div>
+    <div><h4> Quick Price List</h4><p>Cakes ₹500-900/kg<br>Pastries ₹60-120<br>Cookies ₹200/box</p></div>
+</section>
+
+<footer>© 2026 Bake & Blush • Baked fresh daily in Gudivada • Instagram: @bakeandblush</footer>
+
+</body>
+</html>
