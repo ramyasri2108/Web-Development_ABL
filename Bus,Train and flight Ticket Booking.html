@@ -1,1 +1,262 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus and Train Ticket Booking</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+            margin: 0;
+        }
+
+        h1 {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: navy;
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: lightyellow;
+            width: 220px;
+            margin: 15px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: navy;
+            color: white;
+        }
+
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 85%;
+            }
+
+            .card {
+                width: 80%;
+            }
+
+            .navbar a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bus and Train Ticket Booking</h1>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#booking">Booking</a>
+        <a href="#services">Services</a>
+        <a href="#fare">Fare Details</a>
+    </div>
+
+    <div class="container">
+
+        <h2 id="booking">Passenger Booking Form</h2>
+
+        <form>
+
+            <label>Travel Type:</label>
+            <select>
+                <option>Bus</option>
+                <option>Train</option>
+            </select>
+
+            <label>Source:</label>
+            <input type="text" placeholder="Enter Source">
+
+            <label>Destination:</label>
+            <input type="text" placeholder="Enter Destination">
+
+            <label>Travel Date:</label>
+            <input type="date">
+
+            <label>Passenger Name:</label>
+            <input type="text" placeholder="Enter Your Name">
+
+            <label>Age:</label>
+            <input type="number" placeholder="Enter Your Age">
+
+            <label>Number of Passengers:</label>
+            <input type="number" min="1" placeholder="Enter Number">
+
+            <label>Select Seat:</label>
+            <select>
+                <option>Select Seat</option>
+                <option>Seat 1</option>
+                <option>Seat 2</option>
+                <option>Seat 3</option>
+                <option>Seat 4</option>
+            </select>
+
+            <center>
+                <button type="button">Search Tickets</button>
+            </center>
+
+        </form>
+
+        <h2 id="services">Available Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Bus Service</h3>
+                <p>Type: AC Sleeper</p>
+                <p>Departure: 9:00 AM</p>
+                <p>Arrival: 4:00 PM</p>
+                <p>Available Seats: 20</p>
+                <p>Fare: Rs.800</p>
+                <button type="button">Book Bus</button>
+            </div>
+
+            <div class="card">
+                <h3>Train Service</h3>
+                <p>Type: Express Train</p>
+                <p>Departure: 10:00 AM</p>
+                <p>Arrival: 5:00 PM</p>
+                <p>Available Seats: 30</p>
+                <p>Fare: Rs.500</p>
+                <button type="button">Book Train</button>
+            </div>
+
+        </div>
+
+        <h2>Seat Selection</h2>
+
+        <p style="text-align:center;">Select Your Seat</p>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Bus Seats</h3>
+                <p>Seat 1 &nbsp; Seat 2</p>
+                <p>Seat 3 &nbsp; Seat 4</p>
+                <p>Seat 5 &nbsp; Seat 6</p>
+            </div>
+
+            <div class="card">
+                <h3>Train Seats</h3>
+                <p>Seat 1 &nbsp; Seat 2</p>
+                <p>Seat 3 &nbsp; Seat 4</p>
+                <p>Seat 5 &nbsp; Seat 6</p>
+            </div>
+
+        </div>
+
+        <h2 id="fare">Ticket Fare Details</h2>
+
+        <table>
+            <tr>
+                <th>Transport</th>
+                <th>Type</th>
+                <th>Fare</th>
+            </tr>
+
+            <tr>
+                <td>Bus</td>
+                <td>AC Sleeper</td>
+                <td>Rs.800</td>
+            </tr>
+
+            <tr>
+                <td>Train</td>
+                <td>Express</td>
+                <td>Rs.500</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <footer>
+        <h3>Thank You!</h3>
+        <p>Happy Journey</p>
+        <p>Bus and Train Booking Website</p>
+    </footer>
+
+</body>
+</html>
+
